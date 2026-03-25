@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <!-- copied from https://raw.githubusercontent.com/mdn/webassembly-examples/master/understanding-text-format/logger2.html (CC0) -->
@@ -32,10 +33,25 @@
       .container {
         display: flex;
       }
+
+      canvas {
+        display: block; /* Removes default inline margins */
+        width: 100vw;  /* Sets width to 100% of the viewport width */
+        height: 100vh; /* Sets height to 100% of the viewport height */
+        position: absolute; /* Removes canvas from the normal document flow */
+        top: 0;
+        left: 0;
+      }
     </style>
   </head>
 
   <body>
+    
+    <div class="container">
+      <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
+      <span>&nbsp;</span>
+      <div id="output"></div>
+    </div>
     
 
     <script src="main.js" defer></script>
